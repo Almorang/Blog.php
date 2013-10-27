@@ -33,5 +33,7 @@ if(post_count >= 0){
     }while(while_count--);
 
 }else{
-    document.getElementById('blog').innerHTML = '<div class=post>There are currently no blog posts to display.</div>';
+    document.getElementById('blog').innerHTML = '<div class=post>'
+        + 'There are currently no blog posts to display.'
+        + '</div>';
 }

@@ -34,7 +34,11 @@
                       . '<'
                       . htmlspecialchars(trim($_POST['title']))
                       . '<'
-                      . str_replace(array("\r\n", "\n", "\r"), '>>', htmlspecialchars(trim($_POST['content'])))
+                      . str_replace(
+                          array("\r\n", "\n", "\r"),
+                          '>>',
+                          htmlspecialchars(trim($_POST['content']))
+                      )
                       . '<'
                       . "0\n"
                     );

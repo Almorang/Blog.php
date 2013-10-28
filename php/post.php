@@ -1,11 +1,8 @@
 <?php ?>
 <?php if(isset($_POST['post-button'])){
 
-    $secret_username = 'admin';
-    $secret_password = 'admin_password';
-
-    $maxlength_content = 500;
-    $maxlength_title   = 50;
+    // load settings
+    require 'settings.php';
 
     // verify username and password
     if( $_POST['username'] == $secret_username

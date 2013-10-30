@@ -4,9 +4,8 @@
     // load settings
     require 'settings.php';
 
-    // verify username and password
-    if( $_POST['username'] == $secret_username
-     && $_POST['password'] == $secret_password){
+    // verify password
+    if($_POST['password'] == $secret_password){
 
         // verify length of post title
         $length = strlen(trim($_POST['title']));
@@ -27,7 +26,7 @@
                         $db,
                         date('Y-m-d H:i:s')
                       . '<'
-                      . $secret_username
+                      . htmlspecialchars(trim($_POST['username']))
                       . '<'
                       . htmlspecialchars(trim($_POST['title']))
                       . '<'
@@ -36,8 +35,7 @@
                           '>>',
                           htmlspecialchars(trim($_POST['content']))
                       )
-                      . '<'
-                      . "0\n"
+                      . "\n"
                     );
 
                     // unlock the database file

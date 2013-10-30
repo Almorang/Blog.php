@@ -1,6 +1,5 @@
 <?php
 
-$secret_username = 'admin';
 $secret_password = 'admin_password';
 
 $maxlength_content = 500;

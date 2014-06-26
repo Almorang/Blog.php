@@ -19,7 +19,7 @@
 
                 // load the database file
                 $db = fopen(
-                  '../db/db.txt',
+                  $database_path,
                   'a+'
                 );
 

@@ -7,7 +7,6 @@ db.open(
 );
 db.send(null);
 
-
 // put blog posts into array
 var posts = [];
 posts = db.responseText.split('\n');
@@ -24,6 +23,7 @@ posts.splice(
 var post_count = posts.length - 1;
 if(post_count >= 0){
     var post = [];
+
     var while_count = post_count;
     do{
         // load post into array

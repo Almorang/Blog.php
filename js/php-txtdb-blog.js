@@ -31,7 +31,7 @@
             post = posts[post_count - while_count].split('<');
 
             // display post
-            document.getElementById('blog').innerHTML += '<div class=post>'
+            document.getElementById('txtdb-blog').innerHTML += '<div class=txtdb-blog-post>'
               + '<b>' + post[2] + '</b>'
               + ' by <b>' + post[1] + '</b>'
               + ' [' + post[0] + ']<br>'
@@ -40,7 +40,7 @@
         }while(while_count--);
 
     }else{
-        document.getElementById('blog').innerHTML = '<div class=post>'
+        document.getElementById('txtdb-blog').innerHTML = '<div class=txtdb-blog-post>'
           + 'There are currently no blog posts to display.'
           + '</div>';
     }

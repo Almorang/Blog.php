@@ -1,11 +1,16 @@
-form{
+#txtdb-blog-form{
     margin-top: 10px;
 }
-.form-div{
+#txtdb-blog-help-text{
+    display: inline-block;
+    line-height: 35px;
+    text-align: right;
+}
+#txtdb-blog-form-inputs{
     display: inline-block;
     line-height: 35px;
 }
-.post{
+.txtdb-blog-post{
     border-bottom: 2px solid #000;
     padding: 10px;
 }

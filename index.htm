@@ -1,19 +1,19 @@
 <!doctype html>
 <meta charset=utf-8>
-<title>PHP-txtDB-Blog</title>
+<title>txtDB-Blog.php</title>
 <link href=css/php-txtdb-blog.css rel=stylesheet>
 
-<div id=blog></div>
+<div id=txtdb-blog></div>
 
-<form action=php/post.php method=post>
-    <div class=form-div style=text-align:right>
+<form action=php/post.php id=txtdb-blog-form method=post>
+    <div id=txtdb-blog-help-text>
         Content:<br>
         <br>
         Title:<br>
         Name:<br>
         Password:
     </div>
-    <div class=form-div>
+    <div id=txtdb-blog-form-inputs>
         <textarea cols=42 maxlength=500 name=content rows=5></textarea><br>
         <input maxlength=50 name=title size=35><br>
         <input maxlength=64 name=username size=35><br>

@@ -10,45 +10,27 @@
         exit;
     }
 
-    // Load the database file.
-    $db = fopen(
-      $database_path,
-      'a+'
+    // Create an array with new post information.
+    $post = array(
+      "content" => htmlspecialchars(trim($_POST['content'])),
+      "date" => date('Y-m-d H:i:s'),
+      "title" => htmlspecialchars(trim($_POST['title'])),
+      "username" => htmlspecialchars(trim($_POST['username'])),
     );
 
-    // lock the database file
-    if(flock($db, LOCK_EX)){
+    // Add the new $post to the existing posts.
+    $posts = json_decode(file_get_contents($database_path), true);
+    array_unshift(
+      $posts,
+      $post
+    );
+    $posts = json_encode($posts, JSON_FORCE_OBJECT);
 
-        // Write blog post at the end of the database file.
-        fwrite(
-          $db,
-          date('Y-m-d H:i:s')
-          . '<'
-          . htmlspecialchars(trim($_POST['username']))
-          . '<'
-          . htmlspecialchars(trim($_POST['title']))
-          . '<'
-          . str_replace(
-            array(
-              "\r\n",
-              "\n",
-              "\r"
-            ),
-            '>>',
-            htmlspecialchars(trim($_POST['content']))
-          )
-          . "\n"
-        );
-
-        // Unlock the database file.
-        flock(
-          $db,
-          LOCK_UN
-        );
-
-        // Close the database file.
-        fclose($db);
-    }
+    // Update the database file.
+    file_put_contents(
+      $database_path,
+      $posts
+    );
 }
 
 // Return to the blog index.

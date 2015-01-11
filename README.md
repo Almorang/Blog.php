@@ -1,1 +1,1 @@
-Simple blogging software that uses a text file as a database, PHP to handle posting new entries, and JavaScript to display posted entries.
+Simple blogging software that uses a JSON file as a database, PHP to handle posting new entries, and JavaScript to display posted entries.

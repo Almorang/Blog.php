@@ -1,2 +1,2 @@
 ExpiresActive On
-ExpiresByType text/plain A0
+ExpiresByType application/json A0

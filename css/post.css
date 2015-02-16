@@ -1,0 +1,22 @@
+body{
+    background: #000;
+    color: #aaa;
+    font-family: sans-serif;
+}
+#blog-form{
+    margin-top: 10px;
+}
+#blog-help-text{
+    display: inline-block;
+    line-height: 35px;
+    text-align: right;
+}
+#blog-form-inputs{
+    display: inline-block;
+    line-height: 35px;
+}
+input,
+textarea{
+    background: #000;
+    color: #aaa;
+}

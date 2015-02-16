@@ -24,5 +24,6 @@
     if(post_id in posts){
         document.getElementById('content').value = posts[post_id]['content'];
         document.getElementById('title').value = posts[post_id]['title'];
+        document.getElementById('username').value = posts[post_id]['username'];
     }
 }());

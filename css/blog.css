@@ -30,3 +30,7 @@ textarea{
     background: #000;
     color: #aaa;
 }
+input[type=checkbox],
+input[type=submit]{
+    cursor: pointer;
+}

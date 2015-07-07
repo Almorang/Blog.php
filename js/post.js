@@ -1,4 +1,6 @@
 ;(function(){
+    'use strict';
+
     // Check if a post is being edited.
     var post_id = window.location.search.substring(1);
     if(post_id.length <= 0){

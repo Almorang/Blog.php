@@ -1,4 +1,6 @@
 ;(function(){
+    'use strict';
+
     // Get the requested post.
     var post_id = window.location.search.substring(1);
 

@@ -8,7 +8,7 @@
     var db = new XMLHttpRequest();
     db.open(
       'GET',
-      'db/db.json',
+      'json/db.json',
       false
     );
     db.send(null);
